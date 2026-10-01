@@ -1,24 +1,14 @@
-public class Gerente extends Funcionario {
-    private Time time;
-
-    public Gerente(String nome) {
-        super(nome);
+public class Gerente implements Cargo {
+    public Gerente() {
     }
 
-    public Gerente(String nome, String email) {
-        super(nome, email);
-    }
-
-    public Time getTime() {
-        return time;
-    }
-
-    public void setTime(Time time) {
-        this.time = time;
+    @Override
+    public String getDescricao() {
+        return "Gerente";
     }
 
     @Override
     public String toString() {
-        return super.toString() + " [Gerente]";
+        return "[Gerente]";
     }
 }

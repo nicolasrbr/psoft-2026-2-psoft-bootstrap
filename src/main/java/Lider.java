@@ -1,24 +1,14 @@
-public class Lider extends Desenvolvedor {
-    private String nomeSprint;
-
-    public Lider(String nome) {
-        super(nome);
+public class Lider implements Cargo {
+    public Lider() {
     }
 
-    public Lider(String nome, String email) {
-        super(nome, email);
-    }
-
-    public String getNomeSprint() {
-        return nomeSprint;
-    }
-
-    public void setNomeSprint(String nomeSprint) {
-        this.nomeSprint = nomeSprint;
+    @Override
+    public String getDescricao() {
+        return "Lider";
     }
 
     @Override
     public String toString() {
-        return super.toString() + (nomeSprint != null ? " [Sprint: " + nomeSprint + "]" : "");
+        return "[Lider]";
     }
 }

@@ -1,6 +1,11 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Funcionario {
     private String nome;
     private String email;
+    private List<Cargo> cargos = new ArrayList<>();
 
     public Funcionario(String nome) {
         this(nome, "");
@@ -25,6 +30,16 @@ public class Funcionario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void adicionarCargo(Cargo cargo) {
+        if (cargo != null && !cargos.contains(cargo)) {
+            cargos.add(cargo);
+        }
+    }
+
+    public List<Cargo> getCargos() {
+        return Collections.unmodifiableList(cargos);
     }
 
     @Override
